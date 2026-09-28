@@ -33,20 +33,10 @@ React/                  React components and applications
 JavaScript/             JavaScript practice
 TypeScript/             TypeScript practice
 SQL/                    SQL queries and database exercises
-HTML/                   HTML practice
-CSS/                    CSS practice
-C/                      C practice
-Cpp/                    C++ practice
-CSharp/                 C# practice
 Go/                     Go practice
-Rust/                   Rust practice
-Kotlin/                 Kotlin practice
-Swift/                  Swift practice
-PHP/                    PHP practice
-Ruby/                   Ruby practice
 ```
 
-The structure can accommodate any other language or framework. Add a folder with its conventional name, such as `Vue`, `Django`, or `SpringBoot`, when starting practice in it.
+Add another language or framework folder when you decide to practice it, using a simple conventional name.
 
 ## Naming
 

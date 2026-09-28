@@ -7,9 +7,10 @@ This is a shared interview preparation and programming practice repository.
 - Keep shared explanations in `Explanation/<topic>.md` and reusable definitions in `Explanation/terminology.md`.
 - Keep implementations in `<Language>/<topic>/`, using existing language/framework folders where appropriate.
 - Use simple conventional folder names such as `Java`, `Python`, and `React`.
+- The current practice folders are `Java`, `Python`, `React`, `JavaScript`, `TypeScript`, `SQL`, and `Go`.
 - Use lowercase topic slugs with hyphens, such as `two-sum`.
 - Follow the language's source-file naming conventions.
-- Add another language or framework folder when needed, with a short README.
+- Add another language or framework folder only when the user requests practice in it, with a short README.
 - Keep each runnable project's dependencies and lockfile inside its topic folder.
 
 ## Teaching requirements
