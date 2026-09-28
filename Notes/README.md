@@ -1,20 +1,6 @@
 # Notes
 
-Shared explanations for interview problems and technical topics. Save each topic as a Markdown file with a simple name, such as `two-sum.md`.
+The preparation guides are in [Explanation](../Explanation/README.md).
 
-## Explanation format
-
-1. **What it is:** A plain-language definition, the problem it solves, and its intuition.
-2. **How it works:** A step-by-step explanation with the important assumptions.
-3. **Worked examples:** Concrete inputs, intermediate steps, and outputs; code or pseudocode where useful.
-4. **Diagrams:** Flow, sequence, architecture, or state diagrams. Mermaid diagrams can be kept directly in Markdown.
-5. **Where it is needed:** Practical use cases, conditions that make it useful, and tradeoffs.
-6. **Industry scenario:** A realistic scenario with requirements, constraints, design choices, and relevant failure cases. Label hypothetical scenarios clearly.
-7. **Interview discussion:** A concise explanation to give aloud, follow-up questions with answers, and mistakes to avoid.
-8. **Costs and edge cases:** Time and space complexity for algorithms; performance and reliability considerations where relevant.
-
-Start with intuition and build toward technical detail. Link to each available language implementation and include its run command from the repository root.
-
-## Topics
-
-- [Two Sum](two-sum.md) — [Python](../Python/two-sum/solution.py), [Java](../Java/two-sum/README.md)
+- [Two Sum](../Explanation/two-sum.md)
+- [Programming and technical terminology](../Explanation/terminology.md)

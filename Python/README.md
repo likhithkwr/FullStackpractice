@@ -14,4 +14,4 @@ For exercises that need packages, keep their dependency files inside the topic f
 
 ## Topics
 
-- [Two Sum solution](two-sum/solution.py) — [explanation](../Notes/two-sum.md)
+- [Two Sum solution](two-sum/solution.py) — [explanation](../Explanation/two-sum.md)

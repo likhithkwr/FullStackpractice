@@ -1,6 +1,6 @@
 # Two Sum — Java
 
-Find the indices of two different array elements whose values add up to a target. Read the [shared explanation](../../Notes/two-sum.md) for walkthroughs, diagrams, complexity, and an industry scenario.
+Find the indices of two different array elements whose values add up to a target. Read the [shared explanation](../../Explanation/two-sum.md) for walkthroughs, diagrams, complexity, and an industry scenario, and the [terminology guide](../../Explanation/terminology.md) for plain-language definitions.
 
 ## Files
 

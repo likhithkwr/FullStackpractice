@@ -8,4 +8,4 @@ Include the compile and run commands in the topic README. For exercises with dep
 
 ## Topics
 
-- [Two Sum](two-sum/README.md) — [source code](two-sum/TwoSum.java) — [shared explanation](../Notes/two-sum.md)
+- [Two Sum](two-sum/README.md) — [source code](two-sum/TwoSum.java) — [shared explanation](../Explanation/two-sum.md)

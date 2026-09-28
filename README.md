@@ -26,7 +26,7 @@ java Java/two-sum/TwoSum.java
 ## Folder structure
 
 ```text
-Notes/                  Shared explanations, examples, diagrams, and scenarios
+Explanation/            Shared guides, diagrams, examples, and terminology
 Java/                   Java practice
 Python/                 Python practice
 React/                  React components and applications
@@ -52,7 +52,7 @@ The structure can accommodate any other language or framework. Add a folder with
 
 - Use simple language and framework names: `Java`, `Python`, `React`.
 - Use lowercase topic names with hyphens: `two-sum`, `binary-search`, `todo-app`.
-- Put shared notes in `Notes/<topic>.md`.
+- Put shared explanations in `Explanation/<topic>.md` and common definitions in `Explanation/terminology.md`.
 - Put code in `<Language>/<topic>/`.
 - Follow source-file conventions for the language: `TwoSum.java`, `solution.py`, `TwoSum.jsx`.
 - Give alternative approaches descriptive filenames, such as `brute_force.py` and `hash_map.py`.
@@ -60,7 +60,7 @@ The structure can accommodate any other language or framework. Add a folder with
 Example of the same problem practiced in multiple languages:
 
 ```text
-Notes/two-sum.md
+Explanation/two-sum.md
 Python/two-sum/solution.py
 Java/two-sum/TwoSum.java
 ```
@@ -69,6 +69,6 @@ Java/two-sum/TwoSum.java
 
 | Topic | Explanation | Available implementations |
 | --- | --- | --- |
-| Two Sum | [Notes](Notes/two-sum.md) | [Python](Python/two-sum/solution.py), [Java](Java/two-sum/README.md) |
+| Two Sum | [Explanation](Explanation/two-sum.md) | [Python](Python/two-sum/solution.py), [Java](Java/two-sum/README.md) |
 
-See [the notes format](Notes/README.md) for what each explanation covers, and [CONTRIBUTING.md](CONTRIBUTING.md) for the shared Git workflow.
+See [the explanation format](Explanation/README.md), the [terminology guide](Explanation/terminology.md), and [CONTRIBUTING.md](CONTRIBUTING.md) for the shared Git workflow.
