@@ -98,7 +98,9 @@ flowchart TD
     B -- No --> H["No solution: outside the given guarantee"]
 ```
 
-## 5. Python solution
+## 5. Implementations
+
+### Python
 
 This class can be used directly for the supplied interview problem:
 
@@ -118,7 +120,7 @@ class Solution:
         raise ValueError("No valid pair exists")
 ```
 
-### What each part does
+#### Python syntax
 
 | Code | Meaning |
 | --- | --- |
@@ -130,6 +132,34 @@ class Solution:
 | `seen[x] = i` | Make this number available to later elements. |
 
 The final exception is defensive behavior for an input without a solution. Under the problem's guarantee, the function returns before reaching it.
+
+### Java
+
+The runnable [TwoSum.java](../Java/two-sum/TwoSum.java) uses the same complement lookup. Its core method is:
+
+```java
+public static int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> seen = new HashMap<>();
+
+    for (int i = 0; i < nums.length; i++) {
+        int complement = target - nums[i];
+
+        if (seen.containsKey(complement)) {
+            return new int[] {seen.get(complement), i};
+        }
+
+        seen.put(nums[i], i);
+    }
+
+    throw new IllegalArgumentException("No valid pair exists");
+}
+```
+
+The file imports `java.util.Map` and `java.util.HashMap`. The map stores each earlier value as a key and its index as the value. Java generics use the wrapper type `Integer` rather than primitive `int`.
+
+`containsKey` performs the membership check, `get` retrieves the earlier index, and `put` stores the current number. `new int[] {...}` creates the array returned to the caller. The local method is `static` so the example `main()` can call it directly.
+
+Checking before `put` gives the same protection against reusing an index as the Python version. The time and space complexity and all walkthroughs below apply to both implementations. See the [Java guide](../Java/two-sum/README.md) for editor instructions and the LeetCode method signature.
 
 ## 6. Walk through every supplied example
 
@@ -302,12 +332,20 @@ Avoid these mistakes:
 
 ## 14. Run the example code
 
-The accompanying [Python solution](../Python/two-sum/solution.py) contains the optimized solution, the brute-force baseline, and the three supplied examples.
+Both the [Python solution](../Python/two-sum/solution.py) and [Java solution](../Java/two-sum/TwoSum.java) contain the optimized solution, the brute-force baseline, and the three supplied examples.
 
 From the repository root:
 
 ```sh
 python3 Python/two-sum/solution.py
 ```
+
+For Java, with JDK 11 or newer:
+
+```sh
+java Java/two-sum/TwoSum.java
+```
+
+The [Java guide](../Java/two-sum/README.md) also describes compiling and running its checks.
 
 To recall the approach quickly: **complement → lookup → return or store**.

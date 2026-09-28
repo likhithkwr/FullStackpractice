@@ -17,4 +17,4 @@ Start with intuition and build toward technical detail. Link to each available l
 
 ## Topics
 
-- [Two Sum](two-sum.md)
+- [Two Sum](two-sum.md) — [Python](../Python/two-sum/solution.py), [Java](../Java/two-sum/README.md)

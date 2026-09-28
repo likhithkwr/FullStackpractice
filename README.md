@@ -11,10 +11,16 @@ cd FullStackpractice
 
 Install the runtime or tools for the language you want to practice. Each language folder describes its prerequisites; runnable projects keep their own dependencies and instructions inside their topic folder.
 
-Run the existing Python example from the repository root:
+Run a Two Sum example from the repository root:
 
 ```sh
 python3 Python/two-sum/solution.py
+```
+
+Or run the Java version with JDK 11 or newer:
+
+```sh
+java Java/two-sum/TwoSum.java
 ```
 
 ## Folder structure
@@ -56,13 +62,13 @@ Example of the same problem practiced in multiple languages:
 ```text
 Notes/two-sum.md
 Python/two-sum/solution.py
-Java/two-sum/TwoSum.java       # Add when practicing the Java version
+Java/two-sum/TwoSum.java
 ```
 
 ## Topics
 
 | Topic | Explanation | Available implementations |
 | --- | --- | --- |
-| Two Sum | [Notes](Notes/two-sum.md) | [Python](Python/two-sum/solution.py) |
+| Two Sum | [Notes](Notes/two-sum.md) | [Python](Python/two-sum/solution.py), [Java](Java/two-sum/README.md) |
 
 See [the notes format](Notes/README.md) for what each explanation covers, and [CONTRIBUTING.md](CONTRIBUTING.md) for the shared Git workflow.
