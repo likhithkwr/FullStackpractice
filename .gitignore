@@ -1,0 +1,64 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Personal editor files
+.idea/
+*.iml
+*.swp
+*.swo
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# JavaScript, TypeScript, and web frameworks
+node_modules/
+.next/
+.nuxt/
+.svelte-kit/
+*.tsbuildinfo
+
+# Build and test output
+build/
+dist/
+out/
+target/
+bin/
+obj/
+coverage/
+*.class
+*.jar
+*.war
+*.o
+*.obj
+*.exe
+*.dll
+*.pdb
+*.out
+
+# Swift
+.build/
+.swiftpm/
+
+# Ruby and PHP dependencies
+.bundle/
+vendor/
+
+# Logs
+*.log
