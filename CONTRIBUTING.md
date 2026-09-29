@@ -15,6 +15,7 @@ git switch -c practice/your-name/two-sum-python
 Replace `your-name` with your name and `two-sum-python` with the topic and language you are practicing.
 
 1. Add or update code in the appropriate language/topic folder.
+   For an existing problem, implement its practice file on your branch. Use the reference file to study or compare approaches.
 2. Add or update the shared guide in `Explanation` and define new technical terms in plain language.
 3. Update the topic links in the root README and relevant folder READMEs.
 4. Run the example or relevant checks and include the command in the topic instructions.

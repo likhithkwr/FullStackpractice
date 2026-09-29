@@ -166,3 +166,20 @@ The test also uses **logical operators**: `&&` means both conditions must be tru
 | Reservation | Claiming a pack for one order so it is no longer available for another order. |
 
 The algorithm finds candidate pairs. The surrounding service uses these additional rules to select compatible items and reserve them safely.
+
+## 7. Local practice terminology
+
+| Term | Meaning |
+| --- | --- |
+| Reference solution | A completed implementation you can study and compare with your own approach. |
+| Practice starter / template | A file with a method for you to implement and code for running example checks. |
+| TODO | A comment or message marking work that is unfinished. Replace the placeholder in `twoSum()` with your implementation. |
+| Test runner / checker | Code that supplies inputs to your method and validates its returned answer. |
+| `PASS` / `FAIL` | The returned indices satisfy the problem / the answer does not satisfy it. |
+| `NotImplementedError` / `UnsupportedOperationException` | The Python / Java placeholder exception used here to report the unfinished method as `TODO`. |
+| Exit code | A number reported when a program finishes. In these practice files, `0` means all checks passed, `1` means a failure or error, and `2` means unfinished code without a reported failure. |
+| `raise` / `except` in Python | Signal an exception / handle an exception. The runner handles the unfinished-method exception separately from other errors. |
+| `self` in Python | The instance passed to a method when it is called on an object. This is the conventional name for that first parameter. |
+| Main guard in Python | `if __name__ == "__main__":` runs the example checks when this file is launched directly. |
+| Git branch | A named line of work. Each learner can develop their practice implementation on a separate branch. |
+| Pull request | A proposal to merge changes from one branch into another, with an opportunity for review. |
