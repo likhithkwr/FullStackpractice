@@ -226,6 +226,28 @@ An **iteration** is one repetition of the loop. A **method** is a named piece of
 
 For example, in `TwoSum.twoSum(new int[] {2, 7}, 9)`, the arguments are the array containing `2` and `7`, and the target `9`.
 
+### Go
+
+The runnable [Go reference](../Go/two-sum/reference/main.go) uses the same complement lookup:
+
+```go
+func twoSum(nums []int, target int) []int {
+    seen := make(map[int]int)
+    for i, value := range nums {
+        complement := target - value
+        if earlierIndex, found := seen[complement]; found {
+            return []int{earlierIndex, i}
+        }
+        seen[value] = i
+    }
+    return nil
+}
+```
+
+Here `[]int` means a slice of integers, and `map[int]int` stores an integer key and integer value. `make` creates a writable empty map. The `range` loop supplies both the index and the current number. The map lookup supplies an earlier index **and** a boolean named `found`; checking this boolean works even when the stored index is `0`. The final `nil` is only reached if an input violates the problem's one-solution guarantee.
+
+The [Go practice file](../Go/two-sum/practice/main.go) has the same `twoSum` signature and a local checker. The [Go guide](../Go/two-sum/README.md) explains how to run both programs. All three languages check for a complement before storing the current element, so the same index cannot be used twice.
+
 ## 6. Walk through every supplied example
 
 The tables show `seen` **before** checking the current number.
@@ -471,8 +493,9 @@ Use the separate practice files to implement the algorithm in your editor:
 | --- | --- | --- |
 | Java | [TwoSumPractice.java](../Java/two-sum/TwoSumPractice.java) | [TwoSum.java](../Java/two-sum/TwoSum.java) |
 | Python | [practice.py](../Python/two-sum/practice.py) | [solution.py](../Python/two-sum/solution.py) |
+| Go | [practice/main.go](../Go/two-sum/practice/main.go) | [reference/main.go](../Go/two-sum/reference/main.go) |
 
-1. Read the problem statement in the practice file and implement only the `twoSum()` method marked `TODO`.
+1. Read the problem statement in the practice file and implement only the `twoSum()` method or function marked `TODO`.
 2. Run that file using the editor's Run button or the commands below.
 3. Use the feedback to fix your implementation. The checker calls your method and accepts either valid index order.
 4. Compare the completed approach with the reference and explain its time and space complexity.
@@ -482,8 +505,30 @@ From the repository root:
 ```sh
 java Java/two-sum/TwoSumPractice.java
 python3 Python/two-sum/practice.py
+go -C Go/two-sum run ./practice
 ```
 
-The initial run shows eight `TODO` cases because the method is unfinished. After implementing it, correct answers show `PASS`; invalid answers show `FAIL`, and unexpected exceptions show `ERROR`. Exit code `0` means all checks passed, `1` means a failure or error, and `2` means there is unfinished code without a reported failure.
+An unfinished practice file shows eight `TODO` cases. After implementing it, correct answers show `PASS`; invalid answers show `FAIL`, and unexpected errors show `ERROR`. The practice programs use exit code `0` when all checks pass, `1` for a failure or error, and `2` for unfinished code without a reported failure. Go's `go run` wrapper prints `exit status 2` for the unfinished Go program and returns a nonzero command status.
 
-See the [Java practice guide](../Java/two-sum/README.md) or [Python practice guide](../Python/two-sum/README.md) for editor instructions and adding custom cases. Each learner can implement the starter on their own Git branch.
+See the [Java practice guide](../Java/two-sum/README.md), [Python practice guide](../Python/two-sum/README.md), or [Go practice guide](../Go/two-sum/README.md) for run instructions and adding custom cases. Each learner can implement the starter on their own Git branch.
+
+## 17. Two Sum syntax across Python, Go, and Java
+
+The algorithm is identical; the three languages express its steps differently:
+
+| Step | Python | Go | Java |
+| --- | --- | --- | --- |
+| Declare the solver | `def twoSum(self, nums: list[int], target: int) -> list[int]:` | `func twoSum(nums []int, target int) []int {` | `public static int[] twoSum(int[] nums, int target) {` |
+| Empty value-to-index map | `seen = {}` | `seen := make(map[int]int)` | `Map<Integer, Integer> seen = new HashMap<>();` |
+| Scan the input | `for i in range(len(nums)):` | `for i, value := range nums {` | `for (int i = 0; i < nums.length; i++) {` |
+| Calculate partner | `complement = target - nums[i]` | `complement := target - value` | `int complement = target - nums[i];` |
+| Look up partner | `if complement in seen:` | `if earlierIndex, found := seen[complement]; found {` | `if (seen.containsKey(complement)) {` |
+| Store number and index | `seen[nums[i]] = i` | `seen[value] = i` | `seen.put(nums[i], i);` |
+| Return two indices | `return [seen[complement], i]` | `return []int{earlierIndex, i}` | `return new int[] {seen.get(complement), i};` |
+
+- **Variables and types:** Python's annotations describe expected types but are not enforced at runtime. Go names types after parameters and can infer the type of a new local variable with `:=`; `=` assigns a value to an existing location. Java places the type before the name in these declarations and uses `Integer` objects as generic map keys and values.
+- **Blocks and punctuation:** Python uses a colon and indentation to group statements. Go and Java use braces. Java's statements usually end in semicolons; Go normally omits them at the end of lines. The semicolon in Go's map-lookup `if` separates its initializer from the boolean condition.
+- **Containers:** Python returns a list, Go returns an integer slice (`[]int`), and Java returns an integer array (`int[]`). Go's `make(map[int]int)` creates a map where keys and stored values are integers.
+- **Entry points:** This Python example uses a `Solution` class with `self`. The Go example uses a package-level function and starts its program in `func main()`. The Java example uses a static method on `TwoSum` and starts in `public static void main(String[] args)`.
+
+For a map storing `2 → 0`, Go's `seen[2]` has value `0` whether the key is present with value zero or absent. The second lookup result, `found`, is `true` only when the key exists. This is why the Go condition checks `found` and still returns index `0` correctly. The same principle appears in Python's `complement in seen` and Java's `seen.containsKey(complement)`.
