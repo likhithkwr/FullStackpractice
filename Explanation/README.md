@@ -22,6 +22,7 @@ For coding problems, link both the completed reference and the local practice st
 ## Topics
 
 - [Two Sum](two-sum.md) — [Python practice guide](../Python/two-sum/README.md), [Java practice guide](../Java/two-sum/README.md), [Go practice guide](../Go/two-sum/README.md)
+- [URL shortener: scope and request flow](url-shortener.md) — [System design reference and practice guide](../SystemDesign/url-shortener/README.md)
 
 ## Terminology
 
