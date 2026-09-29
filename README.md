@@ -23,6 +23,12 @@ Or use the Java practice file with JDK 11 or newer:
 java Java/two-sum/TwoSumPractice.java
 ```
 
+For Go, install Go 1.21 or newer and run the local practice program:
+
+```sh
+go -C Go/two-sum run ./practice
+```
+
 Implement the `twoSum()` method marked `TODO`, then run the same file again. Its checker reports `PASS`, `FAIL`, or `TODO` for each case. The initial unfinished file reports `TODO`; see the language guide for the exit codes.
 
 Each problem has a completed **reference** and a separate **practice** file for your own implementation. Use your own Git branch when practicing with a friend.
@@ -59,12 +65,14 @@ Python/two-sum/solution.py
 Python/two-sum/practice.py
 Java/two-sum/TwoSum.java
 Java/two-sum/TwoSumPractice.java
+Go/two-sum/reference/main.go
+Go/two-sum/practice/main.go
 ```
 
 ## Topics
 
 | Topic | Explanation | References | Your practice |
 | --- | --- | --- | --- |
-| Two Sum | [Explanation](Explanation/two-sum.md) | [Java](Java/two-sum/TwoSum.java), [Python](Python/two-sum/solution.py) | [Java](Java/two-sum/TwoSumPractice.java), [Python](Python/two-sum/practice.py) |
+| Two Sum | [Explanation](Explanation/two-sum.md) | [Java](Java/two-sum/TwoSum.java), [Python](Python/two-sum/solution.py), [Go](Go/two-sum/reference/main.go) | [Java](Java/two-sum/TwoSumPractice.java), [Python](Python/two-sum/practice.py), [Go](Go/two-sum/practice/main.go) |
 
 See [the explanation format](Explanation/README.md), the [terminology guide](Explanation/terminology.md), and [CONTRIBUTING.md](CONTRIBUTING.md) for the shared Git workflow.

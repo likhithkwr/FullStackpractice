@@ -11,6 +11,7 @@ This is a shared interview preparation and programming practice repository.
 - Use lowercase topic slugs with hyphens, such as `two-sum`.
 - Follow the language's source-file naming conventions.
 - For coding problems, provide a completed reference and a separate runnable practice starter in each requested language, such as `TwoSum.java` with `TwoSumPractice.java`, or `solution.py` with `practice.py`.
+- In Go, use separate `reference` and `practice` package folders when both programs define `main` or functions with the same name. Keep the module file with that exercise.
 - Leave a clearly marked TODO for the learner's method in new practice files. The practice checker should call the learner's method and report unfinished code separately from correct or incorrect answers.
 - Preserve existing learner implementations when updating guides or references.
 - Add another language or framework folder only when the user requests practice in it, with a short README.

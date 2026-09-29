@@ -183,3 +183,25 @@ The algorithm finds candidate pairs. The surrounding service uses these addition
 | Main guard in Python | `if __name__ == "__main__":` runs the example checks when this file is launched directly. |
 | Git branch | A named line of work. Each learner can develop their practice implementation on a separate branch. |
 | Pull request | A proposal to merge changes from one branch into another, with an opportunity for review. |
+
+## 8. Go terms used in Two Sum
+
+| Term or syntax | Plain-language meaning |
+| --- | --- |
+| `package main` | Declares a runnable Go program. The reference and practice programs live in different folders, so both can define `main` and `twoSum`. |
+| `func` / `func main()` | Introduces a Go function / marks where a runnable Go program starts. |
+| `[]int` / slice | A Go slice whose elements are integers. A slice has a variable length; `[2]int` would name a fixed-length, two-element array type. |
+| `map[int]int` | A map with integer keys and integer stored values. Here each key is a number from `nums`, and each stored value is its earlier index. |
+| `make(map[int]int)` | Creates a writable empty map. A declared but uninitialized (`nil`) map cannot accept new entries. |
+| `:=` / `=` | Declare a new local variable while inferring its type / assign to an existing variable or map entry. |
+| `for i, value := range nums` | Visit a slice from left to right, receiving the position and its value on each iteration. |
+| `if earlierIndex, found := seen[complement]; found` | Read both the map value and a boolean reporting whether the key exists. Even an index of `0` has `found == true`. The semicolon separates the lookup from the condition. |
+| `[]int{earlierIndex, i}` | A slice literal containing the two returned indices. |
+| `nil` | The absence of a slice value. The reference returns it only if the promised solution does not exist. |
+| `struct` | A Go type that groups named fields. The practice runner groups each array, target, and expected result into one case. |
+| `slices.Clone(nums)` | Creates a copy for the practice checker, preserving the original input for validation. |
+| `panic`, `defer`, `recover` | Signal an abrupt failure, schedule cleanup on exit, and catch a panic in scheduled code. The practice runner uses these only to distinguish its unfinished TODO marker from an unexpected error. |
+| `go.mod` / module | The file naming a Go module and its minimum Go language version / the collection of packages in this exercise. |
+| `gofmt` | Go's standard source formatter. It uses tabs for indentation. |
+
+See the [Go Two Sum guide](../Go/two-sum/README.md) for the runnable programs. The [Go language specification](https://go.dev/ref/spec) describes the precise map lookup and `range` behavior.
