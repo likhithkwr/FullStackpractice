@@ -8,7 +8,13 @@ Exactly one valid pair exists, and either index order is accepted.
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         # TODO: Replace the placeholder below with your solution. Return the two indices.
-        raise NotImplementedError("TODO: implement twoSum()")
+        seen = {}
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in seen:
+                return [seen[complement], i]
+            seen[nums[i]] = i
+        raise ValueError("No value pair")
 
 
 def is_valid_answer(nums: list[int], target: int, answer: object) -> bool:
