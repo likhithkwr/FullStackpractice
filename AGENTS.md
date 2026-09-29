@@ -10,6 +10,9 @@ This is a shared interview preparation and programming practice repository.
 - The current practice folders are `Java`, `Python`, `React`, `JavaScript`, `TypeScript`, `SQL`, and `Go`.
 - Use lowercase topic slugs with hyphens, such as `two-sum`.
 - Follow the language's source-file naming conventions.
+- For coding problems, provide a completed reference and a separate runnable practice starter in each requested language, such as `TwoSum.java` with `TwoSumPractice.java`, or `solution.py` with `practice.py`.
+- Leave a clearly marked TODO for the learner's method in new practice files. The practice checker should call the learner's method and report unfinished code separately from correct or incorrect answers.
+- Preserve existing learner implementations when updating guides or references.
 - Add another language or framework folder only when the user requests practice in it, with a short README.
 - Keep each runnable project's dependencies and lockfile inside its topic folder.
 
@@ -22,6 +25,7 @@ Use the language requested by the learner. Add links to available implementation
 ## Verification and collaboration
 
 - Run the affected example or relevant checks before reporting it as working.
+- Verify new practice starters launch with TODO feedback. Check the runner with correct and incorrect answers using temporary copies or in-memory substitutions, keeping the learner's on-disk method unfinished.
 - Preserve other contributors' work and unrelated local changes.
 - Keep generated files, dependencies, local environments, and secrets out of commits.
 - Use ordinary Git commits and the shared branch workflow in `CONTRIBUTING.md`.

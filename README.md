@@ -11,17 +11,21 @@ cd FullStackpractice
 
 Install the runtime or tools for the language you want to practice. Each language folder describes its prerequisites; runnable projects keep their own dependencies and instructions inside their topic folder.
 
-Run a Two Sum example from the repository root:
+Start with a Two Sum practice file from the repository root:
 
 ```sh
-python3 Python/two-sum/solution.py
+python3 Python/two-sum/practice.py
 ```
 
-Or run the Java version with JDK 11 or newer:
+Or use the Java practice file with JDK 11 or newer:
 
 ```sh
-java Java/two-sum/TwoSum.java
+java Java/two-sum/TwoSumPractice.java
 ```
+
+Implement the `twoSum()` method marked `TODO`, then run the same file again. Its checker reports `PASS`, `FAIL`, or `TODO` for each case. The initial unfinished file reports `TODO`; see the language guide for the exit codes.
+
+Each problem has a completed **reference** and a separate **practice** file for your own implementation. Use your own Git branch when practicing with a friend.
 
 ## Folder structure
 
@@ -52,13 +56,15 @@ Example of the same problem practiced in multiple languages:
 ```text
 Explanation/two-sum.md
 Python/two-sum/solution.py
+Python/two-sum/practice.py
 Java/two-sum/TwoSum.java
+Java/two-sum/TwoSumPractice.java
 ```
 
 ## Topics
 
-| Topic | Explanation | Available implementations |
-| --- | --- | --- |
-| Two Sum | [Explanation](Explanation/two-sum.md) | [Python](Python/two-sum/solution.py), [Java](Java/two-sum/README.md) |
+| Topic | Explanation | References | Your practice |
+| --- | --- | --- | --- |
+| Two Sum | [Explanation](Explanation/two-sum.md) | [Java](Java/two-sum/TwoSum.java), [Python](Python/two-sum/solution.py) | [Java](Java/two-sum/TwoSumPractice.java), [Python](Python/two-sum/practice.py) |
 
 See [the explanation format](Explanation/README.md), the [terminology guide](Explanation/terminology.md), and [CONTRIBUTING.md](CONTRIBUTING.md) for the shared Git workflow.

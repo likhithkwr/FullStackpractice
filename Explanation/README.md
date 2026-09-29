@@ -17,9 +17,11 @@ Explain terminology alongside the examples. Add shared definitions to [terminolo
 
 Start with intuition and build toward technical detail. Link to each available language implementation and include its run command from the repository root.
 
+For coding problems, link both the completed reference and the local practice starter. Explain which method the learner should implement and how the practice checks report their results.
+
 ## Topics
 
-- [Two Sum](two-sum.md) — [Python](../Python/two-sum/solution.py), [Java](../Java/two-sum/README.md)
+- [Two Sum](two-sum.md) — [Python practice guide](../Python/two-sum/README.md), [Java practice guide](../Java/two-sum/README.md)
 
 ## Terminology
 

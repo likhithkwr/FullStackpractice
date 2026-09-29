@@ -433,7 +433,7 @@ Avoid these mistakes:
 
 **Is linear time optimal?** For arbitrary unsorted input, there are cases where the relevant pair is only established after reading the final element. Worst-case inspection therefore needs linear work. The expected linear-time hash map approach meets that bound under expected constant-time map operations.
 
-## 14. Run the example code
+## 14. Run the reference example code
 
 Both the [Python solution](../Python/two-sum/solution.py) and [Java solution](../Java/two-sum/TwoSum.java) contain the optimized solution, the brute-force baseline, and the three supplied examples.
 
@@ -462,3 +462,28 @@ For the usual compiled workflow, `javac` compiles Java source into `.class` file
 See [terminology.md](terminology.md) for the complete glossary, including `int`, `Integer`, `Map`, `HashMap`, `public`, `static`, `void`, `main`, `new`, generics, lookup, insertion, runtime, compilation, tests, and the production terms in this guide.
 
 To recall the approach quickly: **complement → lookup → return or store**.
+
+## 16. Write your own solution locally
+
+Use the separate practice files to implement the algorithm in your editor:
+
+| Language | Your practice file | Completed reference |
+| --- | --- | --- |
+| Java | [TwoSumPractice.java](../Java/two-sum/TwoSumPractice.java) | [TwoSum.java](../Java/two-sum/TwoSum.java) |
+| Python | [practice.py](../Python/two-sum/practice.py) | [solution.py](../Python/two-sum/solution.py) |
+
+1. Read the problem statement in the practice file and implement only the `twoSum()` method marked `TODO`.
+2. Run that file using the editor's Run button or the commands below.
+3. Use the feedback to fix your implementation. The checker calls your method and accepts either valid index order.
+4. Compare the completed approach with the reference and explain its time and space complexity.
+
+From the repository root:
+
+```sh
+java Java/two-sum/TwoSumPractice.java
+python3 Python/two-sum/practice.py
+```
+
+The initial run shows eight `TODO` cases because the method is unfinished. After implementing it, correct answers show `PASS`; invalid answers show `FAIL`, and unexpected exceptions show `ERROR`. Exit code `0` means all checks passed, `1` means a failure or error, and `2` means there is unfinished code without a reported failure.
+
+See the [Java practice guide](../Java/two-sum/README.md) or [Python practice guide](../Python/two-sum/README.md) for editor instructions and adding custom cases. Each learner can implement the starter on their own Git branch.
