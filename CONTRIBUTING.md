@@ -32,6 +32,23 @@ git push -u origin HEAD
 
 Open a pull request into `main` for the other contributor to review. Once it is merged, switch to `main` and pull before starting another topic.
 
+## System design practice
+
+Keep shared teaching material in `Explanation/<topic>.md` and the completed example and learner worksheet in `SystemDesign/<topic>/reference.md` and `practice.md`. Fill in the worksheet on your own branch, preserving the reference for comparison.
+
+For a URL shortener attempt, choose a branch such as `practice/your-name/url-shortener`. Review and commit your worksheet:
+
+```sh
+git diff
+git add SystemDesign/url-shortener/practice.md
+git commit -m "Practice URL shortener scope and request flow"
+git push -u origin HEAD
+```
+
+Open a PR into `main` and describe your assumptions, one failure path, and what you needed help with. Diagrams and written traces are the evidence for a design exercise; marking a worksheet complete is not a runtime test.
+
+## Repository access
+
 Direct pushes require repository write access. A repository owner can add a friend's GitHub account as a collaborator. Contributors without write access can work in a fork and open a pull request.
 
 ## Adding another language or framework

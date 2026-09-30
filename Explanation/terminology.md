@@ -1,6 +1,6 @@
 # Programming and Technical Terminology
 
-Plain-language definitions for the [Two Sum guide](two-sum.md), its Java and Python implementations, and its industry scenario.
+Plain-language definitions for the [Two Sum guide](two-sum.md), its language implementations, and the [URL shortener design guide](url-shortener.md).
 
 ## 1. Understanding the problem
 
@@ -205,3 +205,45 @@ The algorithm finds candidate pairs. The surrounding service uses these addition
 | `gofmt` | Go's standard source formatter. It uses tabs for indentation. |
 
 See the [Go Two Sum guide](../Go/two-sum/README.md) for the runnable programs. The [Go language specification](https://go.dev/ref/spec) describes the precise map lookup and `range` behavior.
+
+## 9. System design and URL shortening
+
+| Term | Plain-language meaning and example |
+| --- | --- |
+| System design | Choosing a system's responsibilities, data, components, request flows, and trade-offs to meet stated requirements. |
+| Scope | The boundary of what a version handles. This version creates and redirects links. |
+| Functional requirement | An observable capability: submitting a valid destination produces a usable short link. |
+| Non-goal | A feature deliberately excluded from this version, such as click reporting. |
+| Non-functional requirement | A required quality such as speed, availability, or durability. |
+| URL / destination URL | A web address / the original address a short link leads to. |
+| Absolute URL | An address that includes its scheme and host, such as `https://shop.example.com/products/42`. |
+| Scheme / host / path | The protocol (`https`), server name (`shop.example.com`), and resource path (`/products/42`) in a URL. |
+| Query string / fragment | Parameters after `?` / a part after `#` used by the browser. Preserve both in the destination; the fragment is not sent in the HTTP request to the destination server. |
+| Short code / mapping | The identifier in the short URL / its association with a stored destination. |
+| Client / server | A component sending a request / one receiving it and returning a response. |
+| Endpoint | An operation at an address, such as `POST /links`. |
+| HTTP | The request and response protocol used in these web interactions. |
+| POST / GET | The HTTP methods used here to create a link / open an existing short link. |
+| Request / response | Information sent to a service / the result it sends back. |
+| JSON | A text format for structured data, such as `{"url":"https://example.com"}`. |
+| Status code | A number describing an HTTP response's outcome. This design uses `201` for creation, `302` for redirect, `400` for invalid input, `404` for a missing mapping, and `503` for unavailable service work. |
+| Redirect / Location | A response directing a browser to another address / the response header carrying that address. |
+| Header | A named piece of metadata in a request or response. `Location` is one response header. |
+| Latency | Elapsed time for an operation, measured between specified start and end points. |
+| Percentile / p95 | A position in a distribution / the duration at approximately the 95% point of sorted latency observations. It is not the average or a maximum. |
+| Workload / throughput | The type and amount of work supplied / the amount completed per unit of time, such as requests per second. |
+| Availability | How reliably the service can perform the required work when requested. Fast successes alone do not establish it. |
+| Persistence / durability | Data remaining available across sessions or process restarts / committed data surviving failures covered by the storage system's guarantees. |
+| Database / row | A data storage and retrieval system / one stored record. |
+| Primary key / unique constraint | A non-null unique identifier for a row / a database rule preventing duplicate values in the constrained fields. |
+| Database index | A structure that helps the database locate records. This meaning differs from an array position. |
+| Commit | Complete a database write or transaction under its configured guarantees. It is separate from committing a file change in Git. |
+| Code collision | Two attempts generate the same short code. Database uniqueness enforcement prevents replacing an existing mapping. |
+| Retry / bounded retry | Attempt work again / limit the number of attempts so a failure cannot cause endless work. |
+| Idempotency | Repeating the same logical operation has the intended effect only once. For link creation, an agreed request identifier can allow a retry to reuse its previous result. |
+| Cache / stale data | A stored copy used for faster reuse / a copy that no longer reflects the source's current state. |
+| Cache-Control: no-store | An HTTP instruction telling caches not to store the response. A `302` alone does not prohibit caching. |
+| Failure path | The sequence of actions when a dependency or operation fails, such as returning a service error after a database timeout. |
+| Markdown / Mermaid | A text format for documents / diagram syntax inside a Markdown code block that GitHub can render. |
+
+See [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html), [MDN Cache-Control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control), and [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html) for the protocol and database rules. The [URL shortener guide](url-shortener.md) explains the exercise's chosen policies and assumptions.
